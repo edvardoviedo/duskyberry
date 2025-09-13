@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Duskyberry — En construcción</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #000;
+        --fg: #fff;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        height: 100%;
+      }
+      body {
+        margin: 0;
+        font-family: "Montserrat", system-ui, -apple-system, Segoe UI, Roboto,
+          "Helvetica Neue", Arial;
+        background: var(--bg);
+        color: var(--fg);
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      .wrap {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 4vw 6vw 10vw;
+        position: relative;
+      }
+
+      h1 {
+        margin: 0;
+        font-weight: 800;
+        font-size: clamp(2.6rem, 9.5vw, 7.5rem);
+        line-height: 1.03;
+        letter-spacing: -0.02em;
+        text-transform: lowercase;
+      }
+
+      .countdown {
+        margin-top: 1.2rem;
+        font-weight: 600;
+        font-size: clamp(1rem, 3.6vw, 2.2rem);
+        line-height: 1;
+        opacity: 0.95;
+      }
+
+      .time-part {
+        display: inline-block;
+        min-width: 3.2em;
+      }
+
+      /* logo abajo a la derecha */
+      .logo {
+        position: fixed;
+        right: 4vw;
+        bottom: 4vw;
+        width: clamp(64px, 16vw, 140px);
+        height: auto;
+        display: block;
+        filter: drop-shadow(0 6px 18px rgba(0, 0, 0, 0.6));
+      }
+
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+
+      @media (prefers-reduced-motion: no-preference) {
+        h1 {
+          transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="wrap">
+      <h1>web oficial de duskyberry<br />en construcción.</h1>
+
+      <div class="countdown" aria-live="polite" id="countdown">
+        <span class="time-part" id="days">--</span>
+        <span class="time-part" id="hours">--</span>
+        <span class="time-part" id="minutes">--</span>
+        <span class="time-part" id="seconds">--</span>
+      </div>
+
+      <p class="sr-only">
+        Cuenta regresiva hasta el 15 de septiembre de 2025 a las 23:11 (hora
+        local).
+      </p>
+    </main>
+
+    <img
+      class="logo"
+      src="https://raw.githubusercontent.com/edvardoviedo/recursos/refs/heads/main/duskyberry/circulo.png"
+      alt="Logo Duskyberry"
+    />
+
+    <script>
+      const target = new Date("2025-09-15T23:11:00");
+
+      function pad(n) {
+        return String(n).padStart(2, "0");
+      }
+
+      function update() {
+        const now = new Date();
+        let diff = target - now;
+        const daysEl = document.getElementById("days");
+        const hoursEl = document.getElementById("hours");
+        const minutesEl = document.getElementById("minutes");
+        const secondsEl = document.getElementById("seconds");
+
+        if (diff <= 0) {
+          daysEl.textContent = "00";
+          hoursEl.textContent = "00";
+          minutesEl.textContent = "00";
+          secondsEl.textContent = "00";
+          const cd = document.getElementById("countdown");
+          cd.textContent = "¡Ya está aquí!";
+          clearInterval(timer);
+          return;
+        }
+
+        const secs = Math.floor(diff / 1000);
+        const days = Math.floor(secs / (3600 * 24));
+        const hours = Math.floor((secs % (3600 * 24)) / 3600);
+        const minutes = Math.floor((secs % 3600) / 60);
+        const seconds = Math.floor(secs % 60);
+
+        daysEl.textContent = pad(days);
+        hoursEl.textContent = pad(hours);
+        minutesEl.textContent = pad(minutes);
+        secondsEl.textContent = pad(seconds);
+      }
+
+      update();
+      const timer = setInterval(update, 1000);
+    </script>
+  </body>
+</html>
