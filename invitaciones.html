@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Invitaciones</title>
+    <link rel="stylesheet" href="invitaciones.css" />
+    <!-- Asumiendo que el CSS estará en style.css -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+  </head>
+  <body>
+    <!-- Barra superior con menú -->
+    <nav class="navbar">
+      <div class="nav-wrapper container">
+        <a href="#" class="logo">
+          <img
+            src="https://raw.githubusercontent.com/edvardoviedo/recursos/refs/heads/main/duskyberry/circulo.png"
+            alt="Logo"
+            class="logo-nav-img"
+          />
+          <!-- Placeholder para el logo -->
+        </a>
+        <div class="nav-desktop">
+          <a href="index.html" class="nav-link">Inicio</a>
+          <a href="#" class="nav-link">Mascotas</a>
+          <a href="#" class="nav-link">Websites</a>
+          <a href="#" class="nav-link">Contacto</a>
+        </div>
+        <button class="hamburger">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile Navigation (hidden by default) -->
+    <div class="nav-mobile">
+      <div class="nav-mobile-content">
+        <a href="index.html" class="nav-mobile-link">Inicio</a>
+        <a href="#" class="nav-mobile-link">Mascotas</a>
+        <a href="#" class="nav-mobile-link">Websites</a>
+        <a href="#" class="nav-mobile-link">Contacto</a>
+      </div>
+    </div>
+
+    <!-- Header con video incrustable -->
+    <header class="hero">
+      <img class="hero-image" src="https://raw.githubusercontent.com/edvardoviedo/recursos/refs/heads/main/dusky_bg_Correct.jpg" alt="Fondo">
+      <div class="hero-container container">
+        <h1 class="section-title">Invitaciones</h1>
+      </div>
+    </header>
+    
+
+    <main>
+      <!-- Sección: ¿Por qué una mascota es importante? -->
+      <section class="about-section">
+        <div class="container">
+          <h2 class="section-title">
+            ¿Por qué una invitación digital duskyberry?
+          </h2>
+          <div class="about-content">
+            <p class="about-text">
+              Vivimos en un mundo que se mueve rápido, y las invitaciones
+              digitales son la forma más fácil y emocionante de compartir tu
+              evento. Llegan en segundos, sin papel, sin límites de distancia… y
+              con un toque interactivo que despierta curiosidad desde el primer
+              clic.
+            </p>
+
+            <p class="about-text">
+              Claro, Canva es genial (y sí, nos encanta para muchas cosas)… pero
+              al final, una plantilla siempre será una plantilla. Con
+              <strong>Duskyberry</strong> no hay límites:
+            </p>
+
+            <p>
+              🎨 Animaciones que cobran vida.<br />
+              🎵 Música que envuelve la experiencia.<br />
+              ✨ Efectos y detalles que reflejan tu personalidad.
+            </p>
+
+            <p class="about-text">
+              No solo informamos la fecha,
+              <strong
+                >creamos una experiencia que hace que tus invitados
+                digan:</strong
+              ><br />
+              "¡Wow, este evento va a estar increíble!"
+            </p>
+
+            <p>
+              Porque mientras otros envían imágenes bonitas…
+              <strong>tú envías magia</strong> ✨
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sección: ¿Cómo funciona el laboratorio de creación de mascotas? -->
+      <section class="services-list-section">
+        <div class="container">
+          <h2 class="section-title">
+            ¿Qué incluyen las invitaciones de duskyberry?
+          </h2>
+          <p>
+            Todo lo que desees, desde el paquete básico que lleva contador
+            regresivo, formulario de confirmación y mapa de ubicación, hasta
+            galerías, tu playlist favorita, efectos de fuegos artificiales o
+            confeti, ¡la imaginación es el límite!
+          </p>
+
+          <!-- Layout móvil: acordeón -->
+          <div class="services-list-container mobile-layout">
+            <div class="service-list-item active">
+              <h3 class="service-list-name">
+                Formularios y botones funcionales
+              </h3>
+              <div class="service-list-details">
+                <p>
+                  Tus invitados te confirman directo a tu whatsapp y pueden
+                  preguntar si tienen alguna duda.
+                </p>
+                <img
+                  src="https://raw.githubusercontent.com/edvardoviedo/recursos/refs/heads/main/duskyberry/invitaciones/formulario%20de%20confirmaci%C3%B3n%20y%20dudas.jpg"
+                  alt="Compartir idea"
+                  style="
+                    width: 100%;
+                    height: auto;
+                    border-radius: var(--border-radius);
+                    margin-bottom: var(--spacing-md);
+                  "
+                />
+              </div>
+            </div>
+            <div class="service-list-item">
+              <h3 class="service-list-name">Galería y mapa(s)</h3>
+              <div class="service-list-details">
+                <p>
+                  Incluimos tus fotos favoritas y las compartimos en tu
+                  invitación, así como el mapa para que tus invitados sepan cómo
+                  llegar
+                </p>
+                <img
+                  src="https://raw.githubusercontent.com/edvardoviedo/recursos/refs/heads/main/duskyberry/invitaciones/galer%C3%ADa%20y%20mapa.jpg"
+                  alt="Boceto"
+                  style="
+                    width: 100%;
+                    height: auto;
+                    border-radius: var(--border-radius);
+                    margin-bottom: var(--spacing-md);
+                  "
+                />
+              </div>
+            </div>
+            <div class="service-list-item">
+              <h3 class="service-list-name">Spotify y radar</h3>
+              <div class="service-list-details">
+                <p>
+                  Tus canciones favoritas en una playlist compartida para tus
+                  invitados, un radar que simula buscar la ubicación secreta y
+                  ¡todo lo que se te ocurra!
+                </p>
+                <img
+                  src="https://raw.githubusercontent.com/edvardoviedo/recursos/refs/heads/main/duskyberry/invitaciones/spotify%20y%20simulaci%C3%B3n%20de%20radar.jpg"
+                  alt="Digitalización"
+                  style="
+                    width: 100%;
+                    height: auto;
+                    border-radius: var(--border-radius);
+                    margin-bottom: var(--spacing-md);
+                  "
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- Layout desktop: horizontal -->
+          <div class="process-images-container desktop-layout">
+            <div class="process-image-item">
+              <p><strong>Formularios y botones funcionales</strong></p>
+              <img
+                src="https://raw.githubusercontent.com/edvardoviedo/recursos/refs/heads/main/duskyberry/invitaciones/formulario%20de%20confirmaci%C3%B3n%20y%20dudas.jpg"
+                alt="Compartir idea"
+              />
+              <p>
+                Tus invitados te confirman directo a tu whatsapp y pueden
+                preguntar si tienen alguna duda.
+              </p>
+            </div>
+            <div class="process-image-item">
+              <p><strong>Galería y mapa(s)</strong></p>
+              <img
+                src="https://raw.githubusercontent.com/edvardoviedo/recursos/refs/heads/main/duskyberry/invitaciones/galer%C3%ADa%20y%20mapa.jpg"
+                alt="Boceto"
+              />
+              <p>
+                Incluimos tus fotos favoritas y las compartimos en tu
+                invitación, así como el mapa para que tus invitados sepan cómo
+                llegar
+              </p>
+            </div>
+            <div class="process-image-item">
+              <p><strong>Spotify y radar</strong></p>
+              <img
+                src="https://raw.githubusercontent.com/edvardoviedo/recursos/refs/heads/main/duskyberry/invitaciones/spotify%20y%20simulaci%C3%B3n%20de%20radar.jpg"
+                alt="Digitalización"
+              />
+              <p>
+                Tus canciones favoritas en una playlist compartida para tus
+                invitados, un radar que simula buscar la ubicación secreta y
+                ¡todo lo que se te ocurra!
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Galería deslizable -->
+      <section class="testimonials-section">
+        <div class="container">
+          <h2 class="section-title">Experiencia duskyberry</h2>
+          <p class="about-text">
+            Ya sabes cómo creamos tu invitación desde cero, explora aquí algunos ejemplos y elementos que te darán una idea de cómo quedará tu invitación.
+          </p>
+        
+          
+
+          <div style="height: 33px;"></div>
+          <p>Experimenta algunos de los efectos que podemos incorporar en tu invitación</p>
+          <div style="height: 33px;"></div>
+          <div class="grid-efectos">
+            <button id="btn-confeti" class="cta-button secondary large">🎉 Confeti</button>
+            <button id="btn-petalos" class="cta-button secondary large">🌸 Pétalos</button>
+            <button id="btn-corazones" class="cta-button secondary large">💖 Corazones</button>
+            <button id="btn-burbujas" class="cta-button secondary large">🫧 Burbujas</button>
+            <button id="btn-lluvia" class="cta-button secondary large">☔ Lluvia</button>
+            <button id="btn-fuegos" class="cta-button secondary large">🎆 Fuegos artificiales</button>
+            <button id="btn-destellos" class="cta-button secondary large">✨ Destellos de vela</button>
+            <button id="btn-polvohada" class="cta-button secondary large">🧚 Polvo de hada</button>
+            <button id="btn-lucesdiscoteca" class="cta-button secondary large">🎶 Luces de discoteca</button>
+            <button id="btn-nieve" class="cta-button secondary large">❄️ Nieve</button>
+            <button id="btn-estrellas" class="cta-button secondary large">🌟 Estrellas fugaces</button>
+            <button id="btn-globos" class="cta-button secondary large">🎈 Globos</button>
+            
+          </div>
+          
+       
+
+      <!-- Sección: Formulario de contacto -->
+      <section class="contact-section">
+        <div class="container">
+          <h2 class="section-title">
+            Estamos listos y encantados de crear tu invitación. ¡Comencemos!
+          </h2>
+          <form class="contact-form">
+            <div class="form-group">
+              <label for="nombre">Tu nombre</label>
+              <input type="text" id="nombre" name="nombre" required />
+            </div>
+            <div class="form-group">
+              <label for="correo">Tu correo</label>
+              <input type="email" id="correo" name="correo" required />
+            </div>
+            <div class="form-group">
+              <label for="tipo">Tienes un/una</label>
+              <select id="tipo" name="tipo">
+                <option value="marca">Piñata</option>
+                <option value="negocio">Boda</option>
+                <option value="campana">Quinceañera</option>
+                <option value="proyecto">Fiesta sorpresa</option>
+                <option value="otro">Otro evento</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="detalles"
+                >Cuéntanos todos los detalles de cómo quieres que sea tu invitación
+                perfecta, aspecto, color, estilo, efectos, qué quieres que incluya.</label
+              >
+              <textarea
+                id="detalles"
+                name="detalles"
+                rows="6"
+                placeholder="Escribe aquí..."
+              ></textarea>
+            </div>
+            <div class="form-group">
+              <label for="mas_necesitas">¿Necesitas algo más?</label>
+              <textarea
+                id="mas_necesitas"
+                name="mas_necesitas"
+                rows="3"
+                placeholder="Escribe aquí..."
+              ></textarea>
+            </div>
+            <a
+              href="https://wa.me/528134765503"
+              class="cta-button primary large"
+              target="_blank"
+              >Enviar</a
+            >
+          </form>
+        </div>
+      </section>
+
+      <!-- Card: ¿Tienes alguna duda? -->
+      <section class="impact-section">
+        <div class="container">
+          <div class="impact-card">
+            <div class="impact-content">
+              <h2 class="impact-title">¿Tienes alguna duda?</h2>
+              <a
+                href="https://wa.me/528134765503"
+                class="cta-button primary pulsating-button"
+                target="_blank"
+                >Contacto</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container" style="text-align: center">
+        <a href="index.html" class="nav-link">Volver a inicio</a>
+      </div>
+    </footer>
+
+    <script src="invitaciones.js"></script>
+    <!-- Asumiendo que el JS estará en script.js -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper(".swiper", {
+        loop: false,
+        autoplay: false,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+    </script>
+    <!-- ...tu contenido HTML... -->
+
+<script>
+  // Código JS aquí
+  const items = document.querySelectorAll('.service-list-item');
+
+  items.forEach(item => {
+    const header = item.querySelector('.service-list-name');
+    header.style.cursor = 'pointer';
+
+    header.addEventListener('click', () => {
+      if(item.classList.contains('active')) {
+        item.classList.remove('active');
+      } else {
+        items.forEach(i => i.classList.remove('active'));
+        item.classList.add('active');
+      }
+    });
+  });
+</script>
+</body>
+
+  </body>
+</html>
