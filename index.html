@@ -1,163 +1,520 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Duskyberry — En construcción</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Duskyberry - Tu imaginación, nuestro lienzo digital</title>
+    <meta
+      name="description"
+      content="Duskyberry es una agencia creativa que da vida a tus ideas, marcas y proyectos. Especialistas en ilustración digital, desarrollo web e invitaciones digitales interactivas."
+    />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <style>
-      :root {
-        --bg: #000;
-        --fg: #fff;
-      }
-      * {
-        box-sizing: border-box;
-      }
-      html,
-      body {
-        height: 100%;
-      }
-      body {
-        margin: 0;
-        font-family: "Montserrat", system-ui, -apple-system, Segoe UI, Roboto,
-          "Helvetica Neue", Arial;
-        background: var(--bg);
-        color: var(--fg);
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-      }
-
-      .wrap {
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        padding: 4vw 6vw 10vw;
-        position: relative;
-      }
-
-      h1 {
-        margin: 0;
-        font-weight: 800;
-        font-size: clamp(2.6rem, 9.5vw, 7.5rem);
-        line-height: 1.03;
-        letter-spacing: -0.02em;
-        text-transform: lowercase;
-      }
-
-      .countdown {
-        margin-top: 1.2rem;
-        font-weight: 600;
-        font-size: clamp(1rem, 3.6vw, 2.2rem);
-        line-height: 1;
-        opacity: 0.95;
-      }
-
-      .time-part {
-        display: inline-block;
-        min-width: 3.2em;
-      }
-
-      /* logo abajo a la derecha */
-      .logo {
-        position: fixed;
-        right: 4vw;
-        bottom: 4vw;
-        width: clamp(64px, 16vw, 140px);
-        height: auto;
-        display: block;
-        filter: drop-shadow(0 6px 18px rgba(0, 0, 0, 0.6));
-      }
-
-      .sr-only {
-        position: absolute;
-        width: 1px;
-        height: 1px;
-        padding: 0;
-        margin: -1px;
-        overflow: hidden;
-        clip: rect(0, 0, 0, 0);
-        white-space: nowrap;
-        border: 0;
-      }
-
-      @media (prefers-reduced-motion: no-preference) {
-        h1 {
-          transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
-        }
-      }
-    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <main class="wrap">
-      <h1>web oficial de duskyberry<br />en construcción.</h1>
+    <!-- Loader -->
+    <div id="loader" class="loader-container">
+      <div class="loader-content">
+        <!-- Loader de Uiverse.io -->
+        <div class="loader-3d">
+          <div class="loader-inner">
+            <div class="loader-face loader-face-front"></div>
+            <div class="loader-face loader-face-back"></div>
+            <div class="loader-face loader-face-right"></div>
+            <div class="loader-face loader-face-left"></div>
+            <div class="loader-face loader-face-top"></div>
+            <div class="loader-face loader-face-bottom"></div>
+          </div>
+        </div>
+        <img
+          src="https://raw.githubusercontent.com/duskyberry/recursos_gr-ficos/refs/heads/main/duskyberry_logo.png"
+          alt="Duskyberry Logo"
+          class="loader-logo"
+        />
+      </div>
+    </div>
 
-      <div class="countdown" aria-live="polite" id="countdown">
-        <span class="time-part" id="days">--</span>
-        <span class="time-part" id="hours">--</span>
-        <span class="time-part" id="minutes">--</span>
-        <span class="time-part" id="seconds">--</span>
+    <div id="main-content" class="hidden">
+      <!-- Navigation Header -->
+      <nav class="navbar">
+        <div class="container">
+          <div class="nav-wrapper">
+            <div class="logo-nav">
+              <a href="#hero">
+                <img
+                  src="https://raw.githubusercontent.com/edvardoviedo/recursos/refs/heads/main/duskyberry/circulo.png"
+                  alt="Duskyberry Logo"
+                  class="logo-nav-img"
+                />
+              </a>
+            </div>
+            <button
+              class="hamburger"
+              id="hamburgerBtn"
+              aria-label="Menú de navegación"
+            >
+              <span class="hamburger-line"></span>
+              <span class="hamburger-line"></span>
+              <span class="hamburger-line"></span>
+            </button>
+            <div class="nav-desktop">
+              <a href="#about" class="nav-link">¿Quiénes somos?</a>
+              <a href="#services" class="nav-link">Servicios</a>
+              <a href="#contact" class="nav-link">Contacto</a>
+            </div>
+          </div>
+        </div>
+        <!-- Mobile Navigation Menu -->
+        <div class="nav-mobile" id="mobileNav">
+          <div class="nav-mobile-content">
+            <a href="#about" class="nav-mobile-link">¿Quiénes somos?</a>
+            <a href="#services" class="nav-mobile-link">Servicios</a>
+            <a href="#testimonials" class="nav-mobile-link">Testimonios</a>
+            <a href="#contact" class="nav-mobile-link">Contacto</a>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Header / Hero Section -->
+      <header class="hero" id="hero">
+        <video autoplay muted loop playsinline class="hero-video">
+          <source
+            src="https://raw.githubusercontent.com/duskyberry/recursos_gr-ficos/main/video_header.mp4"
+            type="video/mp4"
+          />
+        </video>
+        <div class="hero-container">
+          <div class="logo-container">
+            <!-- Espacio para imagen SRC -->
+            <img
+              src="https://raw.githubusercontent.com/edvardoviedo/recursos/refs/heads/main/Untitled_Artwork.gif"
+              alt="Imagen Principal de la Marca"
+              class="hero-main-image"
+            />
+          </div>
+          <div class="hero-content">
+            <div class="switch-word-container">
+              <div class="words">
+                <span class="word">invitamos</span>
+                <span class="word">ilustramos</span>
+                <span class="word">creamos</span>
+                <span class="word">diseñamos</span>
+                <span class="word">desarrollamos</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="scroll-indicator">
+          <div class="scroll-arrow"></div>
+        </div>
+      </header>
+
+      <!-- ¿Quiénes somos? Section -->
+      <!-- ¿Quiénes somos? Section -->
+      <section class="about-section" id="about">
+        <div class="container">
+          <h2 class="section-title">¿Quiénes somos?</h2>
+
+          <!-- Contenedor flexible para texto y gráfico -->
+          <div class="about-content-and-graph">
+            <!-- Texto -->
+            <div class="about-content">
+              <p class="about-text">
+                Somos <strong>Duskyberry</strong>, una agencia creativa
+                apasionada por transformar ideas en experiencias digitales
+                extraordinarias. Nos especializamos en dar vida a conceptos
+                únicos a través del diseño, la tecnología y la creatividad.
+              </p>
+              <p class="about-text">
+                Combinamos el talento artístico con expertise técnico para crear
+                soluciones visuales que capturan la esencia de tu marca, evento
+                o proyecto. Desde ilustraciones digitales cautivadoras hasta
+                sitios web innovadores e invitaciones interactivas, cada
+                proyecto es una oportunidad para superar las expectativas de la
+                experiencia digital.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Nuestros servicios Section (Cards) -->
+      <section class="services-section-cards">
+        <div class="container">
+          <h2 class="section-title">Nuestros servicios</h2>
+          <div class="swiper servicesSwiper">
+            <div class="swiper-wrapper">
+              <!-- Card Original 1 -->
+              <div class="swiper-slide">
+                <div class="service-card">
+                  <h3 class="service-title">Ilustración Digital</h3>
+                  <p class="service-description">
+                    Creamos personajes únicos y arte conceptual.
+                  </p>
+                </div>
+              </div>
+              <!-- Card Original 2 -->
+              <div class="swiper-slide">
+                <div class="service-card">
+                  <h3 class="service-title">Desarrollo Web</h3>
+                  <p class="service-description">
+                    Sitios modernos y landing pages efectivas.
+                  </p>
+                </div>
+              </div>
+              <!-- Card Original 3 -->
+              <div class="swiper-slide">
+                <div class="service-card">
+                  <h3 class="service-title">Invitaciones Digitales</h3>
+                  <p class="service-description">
+                    Invitaciones interactivas para eventos especiales.
+                  </p>
+                </div>
+              </div>
+              <!-- Card "¿No encuentras lo que buscas?" -->
+              <div class="swiper-slide">
+                <div class="service-card special-card">
+                  <h3 class="service-title">
+                    ¿Buscas una solución en especial? Escríbenos(:
+                  </h3>
+
+                  <a href="#contact" class="cta-button secondary">Contacto</a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Frase inspiradora Section -->
+      <section class="quote-section">
+        <div class="container">
+          <blockquote class="inspirational-quote">
+            "
+            <strong class="highlight-green">Pensar</strong> te hace imaginar,
+            pero, <strong class="highlight-cyan">actuar</strong>, te hace
+            construir."
+          </blockquote>
+        </div>
+      </section>
+
+      <!-- Fragmento HTML -->
+<section class="circle-section">
+  <img
+    src="https://raw.githubusercontent.com/edvardoviedo/recursos/refs/heads/main/duskyberry/circulo.png"
+    alt="Círculo decorativo"
+    class="scroll-circle"
+  />
+</section>
+
+<style>
+  .circle-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 0;
+    background: transparent; /* Puedes cambiar el fondo si quieres */
+  }
+
+  .scroll-circle {
+    max-width: 200px; /* Tamaño del círculo */
+    width: 50vw;
+    height: auto;
+    transition: transform 0.1s linear;
+    will-change: transform;
+  }
+
+  /* Responsive para que siempre esté centrado */
+  @media (max-width: 768px) {
+    .scroll-circle {
+      max-width: 150px;
+    }
+  }
+</style>
+
+<script>
+  const circle = document.querySelector('.scroll-circle');
+  window.addEventListener('scroll', () => {
+    const rotation = window.scrollY * 0.2; // Ajusta la velocidad
+    circle.style.transform = `rotate(${rotation}deg)`;
+  });
+</script>
+
+
+      <!-- Explora nuestros servicios Section (Lista desplegable) -->
+      <section class="services-list-section" id="services">
+        <div class="container">
+          <h2 class="section-title">Explora nuestros servicios</h2>
+          <div class="services-list-container">
+            <!-- Mascotas/Personajes -->
+            <div class="service-list-item">
+              <h3 class="service-list-name">Mascotas/Personajes</h3>
+              <div class="service-list-details">
+                <p>
+                  Creamos personajes únicos que representan la personalidad de
+                  tu marca. Desde conceptualización hasta implementación
+                  completa, desarrollamos mascotas corporativas que conectan
+                  emocionalmente con tu audiencia y fortalecen la identidad
+                  visual de tu empresa.
+                </p>
+                <a href="mascotas.html" class="cta-button secondary">Ver más</a>
+              </div>
+            </div>
+            <!-- Ilustración -->
+            <div class="service-list-item">
+              <h3 class="service-list-name">Ilustración</h3>
+              <div class="service-list-details">
+                <p>
+                  Arte digital personalizado que comunica tu mensaje de manera
+                  visual impactante. Desde ilustraciones editoriales hasta arte
+                  conceptual, creamos piezas únicas que capturan la esencia de
+                  tu proyecto y transmiten emociones de forma efectiva.
+                </p>
+                <a href="#contact" class="cta-button secondary">Más info</a>
+              </div>
+            </div>
+            <!-- Desarrollo Web -->
+            <div class="service-list-item">
+              <h3 class="service-list-name">Desarrollo Web</h3>
+              <div class="service-list-details">
+                <p>
+                  Sitios web modernos, responsivos y optimizados para
+                  conversión. Desde landing pages hasta plataformas complejas,
+                  desarrollamos soluciones web que no solo se ven increíbles,
+                  sino que también generan resultados medibles para tu negocio.
+                </p>
+                <a href="webpages.html" class="cta-button secondary">Ver más</a>
+              </div>
+            </div>
+            <!-- Invitaciones -->
+            <div class="service-list-item">
+              <h3 class="service-list-name">Invitaciones</h3>
+              <div class="service-list-details">
+                <p>
+                  Invitaciones digitales interactivas que crean expectativa y
+                  emoción. Perfectas para eventos especiales y corporativos,
+                  nuestras invitaciones combinan diseño elegante con
+                  funcionalidad moderna para una experiencia memorable.
+                </p>
+                <a href="invitaciones.html" class="cta-button secondary">Ver más</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="testimonials-section" id="testimonials">
+        <div class="container">
+          <h2 class="section-title">Lo que dicen nuestros clientes</h2>
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <div class="testimonials-carousel-fixed">
+            <div class="testimonial-fixed">
+              <div class="testimonial-card-fixed">
+                <p class="testimonial-text-fixed">
+                  "La mascota creada conectó muy bien con nuestros clientes."
+                </p>
+                <div class="testimonial-author-fixed">
+                  <strong>María González</strong>
+                  <span>CEO, TechStart</span>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-fixed">
+              <div class="testimonial-card-fixed">
+                <p class="testimonial-text-fixed">
+                  "El sitio web mejoró nuestras conversiones
+                  significativamente."
+                </p>
+                <div class="testimonial-author-fixed">
+                  <strong>Carlos Mendoza</strong>
+                  <span>Director de Marketing, InnovaLab</span>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-fixed">
+              <div class="testimonial-card-fixed">
+                <p class="testimonial-text-fixed">
+                  "Las invitaciones digitales fueron un éxito total."
+                </p>
+                <div class="testimonial-author-fixed">
+                  <strong>Ana Rodríguez</strong>
+                  <span>Coordinadora de Eventos, Grupo Empresarial</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Impact Section -->
+      <section class="impact-section">
+        <div class="container">
+          <div class="impact-card">
+            <div class="impact-content">
+              <h2 class="impact-title">
+                ¿Estás listo para llevar tu marca al siguiente nivel?
+              </h2>
+              <p class="impact-subtitle">
+                Únete a más de 100 clientes satisfechos que han transformado sus
+                ideas en éxito digital.
+              </p>
+              <a
+                href="#contact"
+                class="cta-button primary large pulsating-button"
+                >Contacto</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section class="contact-section" id="contact">
+        <div class="container">
+          <h2 class="section-title">Conversemos sobre tu proyecto</h2>
+          <form class="contact-form" id="contactForm">
+            <div class="form-group">
+              <label for="name">Nombre</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div class="form-group">
+              <label for="project-type">¿Qué proyecto requieres?</label>
+              <select id="project-type" name="project-type" required>
+                <option value="">Selecciona una opción</option>
+                <option value="invitacion">Invitación</option>
+                <option value="sitio-web">Sitio/Página Web</option>
+                <option value="mascota">Mascota</option>
+                <option value="otro">Otro</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="details">Detalla tu requerimiento</label>
+              <textarea
+                id="details"
+                name="details"
+                rows="4"
+                placeholder="Cuéntanos más sobre tu proyecto..."
+              ></textarea>
+            </div>
+            <button type="submit" class="cta-button primary large">
+              Enviar
+            </button>
+          </form>
+        </div>
+      </section>
+
+      <!-- Pre-Footer Logo -->
+      <div class="pre-footer-logo">
+        <img
+          src="https://raw.githubusercontent.com/duskyberry/recursos_gr-ficos/refs/heads/main/oficial_logo_opt2.png"
+          alt="Logo Oficial Duskyberry"
+        />
       </div>
 
-      <p class="sr-only">
-        Cuenta regresiva hasta el 15 de septiembre de 2025 a las 23:11 (hora
-        local).
-      </p>
-    </main>
+      <footer class="footer">
+        <div class="container">
+          <div class="footer-content">
+            <div class="footer-section">
+              <h4>Conecta con nosotros</h4>
+      
+              <div class="redes-sociales">
+                <!-- Instagram -->
+                <a
+                  href="https://www.instagram.com/duskyberry.studio/#"
+                  target="_blank"
+                  class="socialContainer containerOne"
+                  aria-label="Instagram"
+                >
+                  <img
+                    class="socialSvg"
+                    src="https://raw.githubusercontent.com/duskyberry/recursos_gr-ficos/f783088741af86112502160227cf9240a13b6f99/svgs%20redes/bxl-instagram%20(2).svg"
+                    alt="Instagram"
+                  />
+                </a>
+              
+                <!-- Facebook -->
+                <a
+                  href="https://www.facebook.com/profile.php?id=61576971316515"
+                  target="_blank"
+                  class="socialContainer containerTwo"
+                  aria-label="Facebook"
+                >
+                  <img
+                    class="socialSvg"
+                    src="https://raw.githubusercontent.com/duskyberry/recursos_gr-ficos/f783088741af86112502160227cf9240a13b6f99/svgs%20redes/bxl-facebook%20(1).svg"
+                    alt="Facebook"
+                  />
+                </a>
+              
+                <!-- WhatsApp -->
+                <a
+                  href="https://wa.me/528134765503"
+                  target="_blank"
+                  class="socialContainer containerFour"
+                  aria-label="WhatsApp"
+                >
+                  <img
+                    class="socialSvg whatsapp-icon"
+                    src="https://raw.githubusercontent.com/duskyberry/recursos_gr-ficos/275d1a38b45daa60cdcb15b06d16341fc0bc2d90/svgs%20redes/icons8-whatsapp-24.svg"
+                    alt="WhatsApp"
+                  />
+                </a>
+              </div>
+              
 
-    <img
-      class="logo"
-      src="https://raw.githubusercontent.com/edvardoviedo/recursos/refs/heads/main/duskyberry/circulo.png"
-      alt="Logo Duskyberry"
-    />
 
-    <script>
-      const target = new Date("2025-09-15T23:11:00");
+            </div>
+      
+            
+          </div>
+        </div>
+      </footer>
+      
 
-      function pad(n) {
-        return String(n).padStart(2, "0");
-      }
+            <div class="footer-bottom">
+              <p>&copy; 2025 duskyberry</p>
+              <p>Todos los derechos reservados</p>
+            </div>
 
-      function update() {
-        const now = new Date();
-        let diff = target - now;
-        const daysEl = document.getElementById("days");
-        const hoursEl = document.getElementById("hours");
-        const minutesEl = document.getElementById("minutes");
-        const secondsEl = document.getElementById("seconds");
+            <div style="height: 20px;"></div> <!-- Espacio visual -->
+          </div>
+        </div>
+      </footer>
 
-        if (diff <= 0) {
-          daysEl.textContent = "00";
-          hoursEl.textContent = "00";
-          minutesEl.textContent = "00";
-          secondsEl.textContent = "00";
-          const cd = document.getElementById("countdown");
-          cd.textContent = "¡Ya está aquí!";
-          clearInterval(timer);
-          return;
-        }
-
-        const secs = Math.floor(diff / 1000);
-        const days = Math.floor(secs / (3600 * 24));
-        const hours = Math.floor((secs % (3600 * 24)) / 3600);
-        const minutes = Math.floor((secs % 3600) / 60);
-        const seconds = Math.floor(secs % 60);
-
-        daysEl.textContent = pad(days);
-        hoursEl.textContent = pad(hours);
-        minutesEl.textContent = pad(minutes);
-        secondsEl.textContent = pad(seconds);
-      }
-
-      update();
-      const timer = setInterval(update, 1000);
-    </script>
+      <!-- Botón flotante de WhatsApp -->
+      <div class="whatsapp-float" id="whatsappFloat">
+        <a
+          href="https://wa.me/528134765503"
+          target="_blank"
+          aria-label="Contactar por WhatsApp"
+        >
+          <svg
+            width="32"
+            height="32"
+            viewBox="0 0 24 24"
+            fill="white"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.516z"
+            />
+          </svg>
+        </a>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="main.js"></script>
   </body>
 </html>
