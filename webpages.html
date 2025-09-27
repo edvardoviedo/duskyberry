@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web</title>
+    <link rel="stylesheet" href="webpages.css" />
+    <!-- Asumiendo que el CSS estará en style.css -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+  </head>
+  <body>
+    <!-- Barra superior con menú -->
+    <nav class="navbar">
+      <div class="nav-wrapper container">
+        <a href="#" class="logo">
+          <img
+            src="https://raw.githubusercontent.com/edvardoviedo/recursos/refs/heads/main/duskyberry/circulo.png"
+            alt="Logo"
+            class="logo-nav-img"
+          />
+          <!-- Placeholder para el logo -->
+        </a>
+        <div class="nav-desktop">
+          <a href="index.html" class="nav-link">Inicio</a>
+          <a href="mascotas.html" class="nav-link">Mascotas</a>
+          <a href="invitaciones.html" class="nav-link">Invitaciones</a>
+          <a href="#" class="nav-link">Contacto</a>
+        </div>
+        <button class="hamburger">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile Navigation (hidden by default) -->
+    <div class="nav-mobile">
+      <div class="nav-mobile-content">
+        <a href="index.html" class="nav-mobile-link">Inicio</a>
+        <a href="mascotas.html" class="nav-mobile-link">Mascotas</a>
+        <a href="invitaciones.html" class="nav-mobile-link">Invitaciones</a>
+        <a href="#" class="nav-mobile-link">Contacto</a>
+      </div>
+    </div>
+
+    <header class="hero">
+      <img class="hero-image" src="https://raw.githubusercontent.com/edvardoviedo/recursos/refs/heads/main/dusky_bg_Correct.jpg" alt="Fondo">
+      <div class="hero-container container">
+        <h1 class="section-title">Presencia web</h1>
+      </div>
+    </header>
+
+    <main>
+      <!-- Sección: ¿Por qué una mascota es importante? -->
+      <section class="about-section">
+        <div class="container">
+          <h2 class="section-title">
+            ¿Por qué es importante tener una página web?
+          </h2>
+          <div class="about-content">
+            <p class="about-text">
+                Hoy, tu presencia online no es opcional… es tu carta de presentación al mundo.
+                Una página web, landing page o incluso una mini tienda virtual son mucho más
+                que un espacio en internet: son el lugar donde tu historia cobra vida y tu
+                marca conecta con quien la descubre.
+              </p>
+              
+              <p class="about-text">
+                Claro, hay plataformas rápidas (y sí, nos sacan de apuros)… pero al final,
+                una plantilla siempre será una plantilla. Con
+                <strong>Duskyberry</strong> no solo tendrás un sitio web:
+              </p>
+              
+              <p>
+                🎨 Diseño único que habla tu lenguaje.<br />
+                📱 Experiencia fluida en cualquier dispositivo.<br />
+                ✨ Detalles y elementos que transmiten tu esencia.
+              </p>
+              
+              <p class="about-text">
+                No solo mostramos productos o servicios,
+                <strong
+                  >creamos una experiencia que hace que tus visitantes piensen:</strong
+                ><br />
+                "¡Esto es exactamente lo que estaba buscando!"
+              </p>
+              
+              <p>
+                Porque mientras otros tienen “páginas bonitas”… 
+                <strong>tú tendrás un espacio que enamora</strong> ✨
+              </p>
+              
+          </div>
+        </div>
+      </section>
+
+      <!-- Sección: ¿Cómo funciona el laboratorio de creación de mascotas? -->
+      <section class="services-list-section">
+        <div class="container">
+          <h2 class="section-title">
+            ¿Qué tipo de marcas o proyectos necesitan una página?
+          </h2>
+          <p class="about-text">
+            ¿Quién necesita una página web? Prácticamente <strong>cualquier marca,
+            negocio o proyecto</strong> que quiera crecer. Desde una pastelería que recién
+            abre sus puertas, un dentista con años de experiencia, un evento que está por
+            suceder en tu ciudad… hasta el lanzamiento de un videojuego, un estudio de
+            uñas, psicólogos, terapeutas, estilistas, entrenadores de gym, servicios de
+            reparación de celulares o banquetes.
+          </p>
+          
+          <p class="about-text">
+            No importa si es pequeño o grande: una presencia profesional en la web te da
+            <strong>credibilidad, alcance y disponibilidad 24/7</strong>. Tus clientes
+            podrán conocer tus precios, resolver dudas, ver ejemplos de tu trabajo,
+            agendar una cita y descubrir lo que ofreces… todo en un solo lugar y sin
+            importar la hora o el día.
+          </p>
+          
+          <p class="about-text">
+            Con una web, llegas a más público, creas confianza y aumentas tus
+            oportunidades de ventas o ingresos. Y lo mejor: todo con un espacio que
+            refleja tu esencia y hace que tu marca se quede en la memoria.
+          </p>
+
+          <section class="about-section">
+            <h2 class="section-title">¿Qué puede incluir mi página?</h2>
+            <p class="about-text">
+              Todo lo que tu negocio, marca o proyecto necesita para brillar en internet y
+              enamorar a tus clientes. Con un diseño a tu medida y funciones que facilitan
+              tu día a día:
+            </p>
+          
+            <ul class="feature-list">
+              <li>📩 <strong>Formularios inteligentes</strong> que envían pedidos o consultas directo a tu WhatsApp listos para confirmar o cobrar.</li>
+              <li>🖼️ <strong>Galería interactiva</strong> con animaciones suaves y efecto “wow” en cada imagen.</li>
+              <li>🎥 <strong>Videos integrados</strong> para mostrar tu trabajo, productos o eventos.</li>
+              <li>📍 <strong>Mapa interactivo</strong> para que te encuentren fácil y rápido.</li>
+              <li>🔗 <strong>Botones directos</strong> a tus redes sociales, email o cualquier canal de contacto.</li>
+              <li>✨ <strong>Efectos visuales y animaciones</strong> que hacen única tu página.</li>
+              <li>🎨 <strong>Estilo 100% personalizado</strong> con código a medida.</li>
+              <li>📑 <strong>Secciones personalizadas</strong>: Quiénes somos, historia, ejemplos de trabajo, ayuda, preguntas frecuentes…</li>
+              <li>🎵 <strong>Playlist integrada</strong> para ambientar la experiencia de tus visitantes.</li>
+              <li>🗺️ <strong>Cómodo “Cómo llegar”</strong> con Google Maps o indicaciones paso a paso.</li>
+              <li>💬 <strong>Testimonios reales</strong> que generan confianza (“Qué dicen nuestros clientes”).</li>
+              <li>🛍️ <strong>Mini tienda online</strong> con catálogo o menú que redirigé a tu Whatsapp.</li>
+              <li>⏳ <strong>Cuenta regresiva</strong> para lanzamientos o eventos importantes.</li>
+              <li>📢 <strong>Banners animados</strong> para promociones o avisos especiales.</li>
+              <li>🌙 <strong>Modo oscuro/claro</strong> para una experiencia moderna y adaptable.</li>
+            </ul>
+          
+            <p class="about-text">
+              Y si tienes una idea especial, la creamos. Porque tu página no tiene límites
+              cuando el diseño y la funcionalidad se combinan.
+            </p>
+          </section>
+
+         
+      <!-- Galería deslizable -->
+      <section class="testimonials-section">
+        <h2 class="section-title">Experiencia duskyberry</h2>
+        <p class="about-text">
+            Ya sabes todo lo que puede incluir tu página, explora aquí algunos ejemplos y elementos que te darán una idea de cómo quedará tu nueva página.
+          </p>
+        <div class="container">
+          
+          
+          
+
+          <div style="height: 33px;"></div>
+          <p>Explora algunos ejemplos de páginas que hemos desarrollado</p>
+          <div style="height: 33px;"></div>
+          <div class="grid-efectos">
+            <style>
+                .cta-button {
+                  position: relative;
+                  padding: 0.6rem 1.2rem;
+                  font-size: 1rem;
+                  border: none;
+                  background: #333;
+                  color: white;
+                  border-radius: 0.5rem;
+                  cursor: pointer;
+                }
+              
+                .badge-top-right {
+                  position: absolute;
+                  top: -8px;
+                  right: -8px;
+                  background-color: #0cc0df; /* Azul estilo Bootstrap */
+                  color: white;
+                  font-size: 0.65rem;
+                  font-weight: bold;
+                  padding: 0.25rem 0.5rem;
+                  border-radius: 50px;
+                  white-space: nowrap;
+                }
+              </style>
+              
+              <button class="cta-button secondary large" 
+        onclick="window.location.href='https://serviciosbs.github.io/el_texano/'">
+  El texano
+  <span class="badge-top-right">Restaurante · Food Truck</span>
+</button>
+              
+              <style>
+                .cta-button {
+                  position: relative;
+                  padding: 0.6rem 1.2rem;
+                  font-size: 1rem;
+                  border: none;
+                  background: #333;
+                  color: white;
+                  border-radius: 0.5rem;
+                  cursor: pointer;
+                }
+              
+                .badge-top-right {
+                  position: absolute;
+                  top: -8px;
+                  right: -8px;
+                  background-color: #0cc0df; /* Azul estilo Bootstrap */
+                  color: white;
+                  font-size: 0.65rem;
+                  font-weight: bold;
+                  padding: 0.25rem 0.5rem;
+                  border-radius: 50px;
+                  white-space: nowrap;
+                }
+              </style>
+              
+              <button class="cta-button secondary large" onclick="window.location.href='https://edvardoviedo.github.io/mi_otro_yo_test/'">
+                Mi Otro yo
+                <span class="badge-top-right">Retiro espiritual (campamento)</span>
+              </button>
+              
+
+              <style>
+                .cta-button {
+                  position: relative;
+                  padding: 0.6rem 1.2rem;
+                  font-size: 1rem;
+                  border: none;
+                  background: #333;
+                  color: white;
+                  border-radius: 0.5rem;
+                  cursor: pointer;
+                }
+              
+                .badge-top-right {
+                  position: absolute;
+                  top: -8px;
+                  right: -8px;
+                  background-color: #0cc0df; /* Azul estilo Bootstrap */
+                  color: white;
+                  font-size: 0.65rem;
+                  font-weight: bold;
+                  padding: 0.25rem 0.5rem;
+                  border-radius: 50px;
+                  white-space: nowrap;
+                }
+              </style>
+              
+              <button class="cta-button secondary large" onclick="window.location.href='https://lunademarzo.netlify.app/'">
+                Luna de Marzo
+                <span class="badge-top-right">Sitio holístico (alternativo)</span>
+              </button>
+              
+
+              <style>
+                .cta-button {
+                  position: relative;
+                  padding: 0.6rem 1.2rem;
+                  font-size: 1rem;
+                  border: none;
+                  background: #333;
+                  color: white;
+                  border-radius: 0.5rem;
+                  cursor: pointer;
+                }
+              
+                .badge-top-right {
+                  position: absolute;
+                  top: -8px;
+                  right: -8px;
+                  background-color: #0cc0df; /* Azul estilo Bootstrap */
+                  color: white;
+                  font-size: 0.65rem;
+                  font-weight: bold;
+                  padding: 0.25rem 0.5rem;
+                  border-radius: 50px;
+                  white-space: nowrap;
+                }
+              </style>
+              
+              <button class="cta-button secondary large" onclick="window.location.href='https://hindumex.netlify.app/'">
+                Asosiación Hindú Mex.
+                <span class="badge-top-right">Sitio Religioso</span>
+              </button>
+              
+              <style>
+                .cta-button {
+                  position: relative;
+                  padding: 0.6rem 1.2rem;
+                  font-size: 1rem;
+                  border: none;
+                  background: #333;
+                  color: white;
+                  border-radius: 0.5rem;
+                  cursor: pointer;
+                }
+              
+                .badge-top-right {
+                  position: absolute;
+                  top: -8px;
+                  right: -8px;
+                  background-color: #0cc0df; /* Azul estilo Bootstrap */
+                  color: white;
+                  font-size: 0.65rem;
+                  font-weight: bold;
+                  padding: 0.25rem 0.5rem;
+                  border-radius: 50px;
+                  white-space: nowrap;
+                }
+              </style>
+              
+              <button class="cta-button secondary large" onclick="window.location.href='https://mansonsorchestralhalloween.netlify.app/'">
+                Marilyn Manson event
+                <span class="badge-top-right">Practice site</span>
+              </button>
+            
+           
+              <style>
+                .cta-button {
+                  position: relative;
+                  padding: 0.6rem 1.2rem;
+                  font-size: 1rem;
+                  border: none;
+                  background: #333;
+                  color: white;
+                  border-radius: 0.5rem;
+                  cursor: pointer;
+                }
+              
+                .badge-top-right {
+                  position: absolute;
+                  top: -8px;
+                  right: -8px;
+                  background-color: #0cc0df; /* Azul estilo Bootstrap */
+                  color: white;
+                  font-size: 0.65rem;
+                  font-weight: bold;
+                  padding: 0.25rem 0.5rem;
+                  border-radius: 50px;
+                  white-space: nowrap;
+                }
+              </style>
+              
+              <button class="cta-button secondary large" onclick="window.location.href='https://serviciosbs.github.io/brujula_sagrada/'">
+                Brújula Sagrada
+                <span class="badge-top-right">Sitio temático</span>
+              </button>
+
+              <style>
+                .cta-button {
+                  position: relative;
+                  padding: 0.6rem 1.2rem;
+                  font-size: 1rem;
+                  border: none;
+                  background: #333;
+                  color: white;
+                  border-radius: 0.5rem;
+                  cursor: pointer;
+                }
+              
+                .badge-top-right {
+                  position: absolute;
+                  top: -8px;
+                  right: -8px;
+                  background-color: #0cc0df; /* Azul estilo Bootstrap */
+                  color: white;
+                  font-size: 0.65rem;
+                  font-weight: bold;
+                  padding: 0.25rem 0.5rem;
+                  border-radius: 50px;
+                  white-space: nowrap;
+                }
+              </style>
+              
+              <button class="cta-button secondary large" onclick="window.location.href='https://movonte.com/'">
+                Movonte
+                <span class="badge-top-right">Consultoría</span>
+              </button>
+
+              <style>
+                .cta-button {
+                  position: relative;
+                  padding: 0.6rem 1.2rem;
+                  font-size: 1rem;
+                  border: none;
+                  background: #333;
+                  color: white;
+                  border-radius: 0.5rem;
+                  cursor: pointer;
+                }
+              
+                .badge-top-right {
+                  position: absolute;
+                  top: -8px;
+                  right: -8px;
+                  background-color: #0cc0df; /* Azul estilo Bootstrap */
+                  color: white;
+                  font-size: 0.65rem;
+                  font-weight: bold;
+                  padding: 0.25rem 0.5rem;
+                  border-radius: 50px;
+                  white-space: nowrap;
+                }
+              </style>
+              
+              <button class="cta-button secondary large" onclick="window.location.href='https://keshot.netlify.app/'">
+                Keshot
+                <span class="badge-top-right">Negocio de tecnología</span>
+              </button>
+
+            
+          </div>
+          
+       
+
+      <!-- Sección: Formulario de contacto -->
+      <section class="contact-section">
+        <h2 class="section-title">
+            Estamos listos y encantados de crear tu website. ¡Comencemos!
+          </h2>
+        <div class="container">
+          
+          <form class="contact-form">
+            <div class="form-group">
+              <label for="nombre">Tu nombre</label>
+              <input type="text" id="nombre" name="nombre" required />
+            </div>
+            <div class="form-group">
+              <label for="correo">Tu correo</label>
+              <input type="email" id="correo" name="correo" required />
+            </div>
+            <div class="form-group">
+              <label for="tipo">Tienes un</label>
+              <select id="tipo" name="tipo">
+                <option value="marca">Negocio</option>
+                <option value="negocio">Marca</option>
+                <option value="campana">Evento</option>
+                <option value="proyecto">Consultorio</option>
+                <option value="otro">Otro giro</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="detalles"
+                >Cuéntanos todos los detalles de cómo quieres que sea tu sitio, aspecto, color, estilo, efectos, qué quieres que incluya.</label
+              >
+              <textarea
+                id="detalles"
+                name="detalles"
+                rows="6"
+                placeholder="Escribe aquí..."
+              ></textarea>
+            </div>
+            <div class="form-group">
+              <label for="mas_necesitas">¿Necesitas algo más?</label>
+              <textarea
+                id="mas_necesitas"
+                name="mas_necesitas"
+                rows="3"
+                placeholder="Escribe aquí..."
+              ></textarea>
+            </div>
+            <a
+            href="https://wa.me/528134765503"
+            class="cta-button primary large centered-btn"
+            target="_blank"
+          >
+            Enviar
+          </a>
+          </form>
+        </div>
+      </section>
+
+      <!-- Card: ¿Tienes alguna duda? -->
+      <section class="impact-section">
+        <div class="container">
+          <div class="impact-card">
+            <div class="impact-content">
+              <h2 class="impact-title">¿Tienes alguna duda?</h2>
+              <a
+                href="https://wa.me/528134765503"
+                class="cta-button primary pulsating-button"
+                target="_blank"
+                >Contacto</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container" style="text-align: center">
+        <a href="index.html" class="nav-link">Volver a inicio</a>
+      </div>
+    </footer>
+
+    <script src="webpages.js"></script>
+    <!-- Asumiendo que el JS estará en script.js -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper(".swiper", {
+        loop: false,
+        autoplay: false,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+    </script>
+    <!-- ...tu contenido HTML... -->
+
+<script>
+  // Código JS aquí
+  const items = document.querySelectorAll('.service-list-item');
+
+  items.forEach(item => {
+    const header = item.querySelector('.service-list-name');
+    header.style.cursor = 'pointer';
+
+    header.addEventListener('click', () => {
+      if(item.classList.contains('active')) {
+        item.classList.remove('active');
+      } else {
+        items.forEach(i => i.classList.remove('active'));
+        item.classList.add('active');
+      }
+    });
+  });
+</script>
+</body>
+
+  </body>
+</html>
