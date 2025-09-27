@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Duskyberry - Invitaciones Digitales</title>
+    <link rel="stylesheet" href="invitaciondusky.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Main Content -->
+    <div id="main-content">
+      <!-- Hero Section -->
+      <header class="hero">
+        <video autoplay muted loop playsinline class="hero-video">
+          <source src="./assets/video/invitacion_header.mp4" type="video/mp4" />
+          Tu navegador no soporta el tag de video.
+        </video>
+        <div class="hero-container">
+          <h1 class="hero-title">Tu nombre</h1>
+          <p class="hero-subtitle">
+            Podemos poner de fondo un video corto, una foto o animación
+          </p>
+        </div>
+        <div class="scroll-indicator">
+          <div class="scroll-arrow"></div>
+        </div>
+      </header>
+
+      <!-- Prefacio Section -->
+      <section class="about-section container">
+        <div class="about-content">
+          <h2 class="section-title">Prefacio</h2>
+          <p class="about-text">
+            Aquí puedes escribir una breve introducción a tu evento. Estas
+            invitaciones son geniales para piñatas, XV años, bodas,
+            graduaciones, fiestas sorpresa y mucho más.
+          </p>
+        </div>
+      </section>
+
+      <!-- Detalles del Evento Section -->
+      <section class="services-section-cards container">
+        <h2 class="section-title">Detalles del Evento</h2>
+        <div class="details-grid">
+          <div class="service-card special-card">
+            <h3>📍 Lugar</h3>
+            <p>Salón de Eventos Central</p>
+          </div>
+          <div class="service-card special-card">
+            <h3>🗓️ Fecha</h3>
+            <p>31 de Diciembre, 2025</p>
+          </div>
+          <div class="service-card special-card">
+            <h3>⏰ Hora</h3>
+            <p>20:00 PM</p>
+          </div>
+          <div class="service-card special-card">
+            <h3>👗 Dresscode</h3>
+            <p>Formal</p>
+          </div>
+          v>
+        </div>
+      </section>
+
+      <!-- Contador Latiente Section -->
+      <section class="impact-section container">
+        <h2 class="section-title">Contador para la Gran Fecha</h2>
+        <div class="impact-card">
+          <div class="impact-content">
+            <p class="impact-subtitle">
+              Podemos incluir un contador para la gran fecha
+            </p>
+            <div id="countdown" class="countdown-timer"></div>
+            <button
+              class="cta-button primary pulsating-button"
+              id="add-to-calendar"
+            >
+              Añadir a calendario
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Galería Fotográfica Clickable Section -->
+      <section class="services-section-cards container">
+        <h2 class="section-title">Galería Fotográfica</h2>
+        <p class="about-text">
+          Podemos compartirle a tus invitados algunas fotografías que sean
+          especiales para ti
+        </p>
+        <div class="gallery-grid">
+          <!-- Images will be dynamically loaded here -->
+        </div>
+        <div class="gallery-navigation">
+          <button class="cta-button secondary" id="prev-gallery">
+            Anterior
+          </button>
+          <button class="cta-button primary" id="next-gallery">
+            Siguiente
+          </button>
+        </div>
+      </section>
+
+      <!-- Playlist Especial Section -->
+      <section class="about-section container">
+        <h2 class="section-title">Playlist Especial</h2>
+        <p class="about-text">
+          Podemos compartir esas canciones especiales y que harán de tu evento
+          el mejor
+        </p>
+        <div class="spotify-embed">
+          <iframe
+            style="border-radius: 12px"
+            src="https://open.spotify.com/embed/playlist/37i9dQZF1DXcBWIGoYBM5M?utm_source=generator"
+            width="100%"
+            height="352"
+            frameborder="0"
+            allowfullscreen=""
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy"
+          ></iframe>
+        </div>
+      </section>
+
+      <!-- Mapa del Evento Section -->
+      <section class="about-section container">
+        <h2 class="section-title">Mapa del Evento</h2>
+        <p class="about-text">
+          Para que todo sea más sencillo para tus invitados podemos poner el
+          mapa a la ubicación. ¿Tu evento tiene una dirección para misa y otra
+          para la fiesta? No hay problema, ¡ponemos ambas!
+        </p>
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.506945678859!2d-99.1685834851446!3d19.4326099868826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ff35f5e0a0f1%3A0x2a9e2a9e2a9e2a9e!2sPalacio%20de%20Bellas%20Artes!5e0!3m2!1ses-419!2smx!4v1678901234567!5m2!1ses-419!2smx"
+            width="100%"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.506945678859!2d-99.1685834851446!3d19.4326099868826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ff35f5e0a0f1%3A0x2a9e2a9e2a9e2a9e!2sPalacio%20de%20Bellas%20Artes!5e0!3m2!1ses-419!2smx!4v1678901234567!5m2!1ses-419!2smx"
+            width="100%"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </section>
+
+      <!-- Formulario con Halo Resplandeciente y Reflejo Ráfaga Section -->
+      <section class="contact-section container">
+        <h2 class="section-title">Confirma tu Asistencia</h2>
+        <p class="about-text">
+          En Duskyberry podemos ofrecerte dos tipos de formularios para
+          confirmar asistencia. Uno que genera automáticamente una base de datos
+          que puedes consultar desde tu correo. Uno más personal que envía cada
+          confirmación directamente a tu WhatsApp. ¡Tú decides cuál se adapta
+          mejor a tu evento!
+        </p>
+        <form class="contact-form">
+          <div class="form-group">
+            <label for="name">Tu nombre</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Tu nombre completo"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="guests">¿Cuántas personas vienen contigo?</label>
+            <input type="number" id="guests" name="guests" min="0" value="0" />
+          </div>
+          <div class="form-group">
+            <label for="message">Mensaje especial para el festejado</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              placeholder="Escribe tu mensaje aquí"
+            ></textarea>
+          </div>
+          <button type="submit" class="cta-button primary whatsapp-button">
+            Enviar por WhatsApp
+          </button>
+        </form>
+      </section>
+
+      <!-- Mesa de Regalos Section -->
+      <section class="about-section container">
+        <h2 class="section-title">Mesa de Regalos</h2>
+        <p class="about-text">
+          Sabemos que lo más importante es que tus invitados asistan a tu
+          evento, pero todos disfrutamos recibir un detalle especial. Podemos
+          incrustar una mesa de regalos totalmente personalizada con tus listas
+          de Amazon, Mercado Libre, Liverpool o cualquier tienda. Incluso
+          podemos habilitar una opción para aportes en efectivo.
+        </p>
+        <div class="gift-table-buttons">
+          <button class="cta-button primary pulsating-button">Liverpool</button>
+          <button class="cta-button primary pulsating-button">
+            Mercado Libre
+          </button>
+          <button class="cta-button primary pulsating-button">Amazon</button>
+          <div class="cash-card">
+            <span>CA$H</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Botón de Contacto Rápido Section -->
+      <section class="impact-section container">
+        <h2 class="section-title">¿Tienes alguna duda de mi evento?</h2>
+        <div class="impact-card">
+          <div class="impact-content">
+            <button class="cta-button primary whatsapp-button large">
+              Contáctame
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Timeline Section -->
+      <section class="about-section container">
+        <h2 class="section-title">Horario del Evento</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h3>18:00 - Misa</h3>
+              <p>Iglesia de San Juan Bautista</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h3>19:00 - Recepción</h3>
+              <p>Salón de Eventos Central</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h3>20:00 - Cena</h3>
+              <p>Disfruta de un delicioso banquete.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h3>21:00 - Baile</h3>
+              <p>¡A bailar toda la noche!</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+
+      <footer class="footer">
+        <div class="container">
+          <p>&copy; 2025 Duskyberry. Todos los derechos reservados.</p>
+        </div>
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+    <script src="invitaciondusky.js"></script>
+  </body>
+</html>
