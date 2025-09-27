@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mascotas</title>
+    <link rel="stylesheet" href="mascotas.css" />
+    <!-- Asumiendo que el CSS estará en style.css -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    <!-- Barra superior con menú -->
+    <nav class="navbar">
+      <div class="nav-wrapper container">
+        <a href="#" class="logo">
+          <img
+            src="https://raw.githubusercontent.com/edvardoviedo/recursos/refs/heads/main/duskyberry/circulo.png"
+            alt="Logo"
+            class="logo-nav-img"
+          />
+          <!-- Placeholder para el logo -->
+        </a>
+        <div class="nav-desktop">
+          <a href="index.html" class="nav-link">Inicio</a>
+          <a href="#" class="nav-link">Servicios</a>
+          <a href="#" class="nav-link">Portafolio</a>
+          <a href="#" class="nav-link">Contacto</a>
+        </div>
+        <button class="hamburger">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile Navigation (hidden by default) -->
+    <div class="nav-mobile">
+      <div class="nav-mobile-content">
+        <a href="index.html" class="nav-mobile-link">Inicio</a>
+        <a href="#" class="nav-mobile-link">Servicios</a>
+        <a href="#" class="nav-mobile-link">Portafolio</a>
+        <a href="#" class="nav-mobile-link">Contacto</a>
+      </div>
+    </div>
+
+    <header class="hero">
+      <img class="hero-image" src="https://raw.githubusercontent.com/edvardoviedo/recursos/refs/heads/main/dusky_bg_Correct.jpg" alt="Fondo">
+      <div class="hero-container container">
+        <h1 class="section-title">Mascotas</h1>
+      </div>
+    </header>
+
+    <main>
+      <!-- Sección: ¿Por qué una mascota es importante? -->
+      <section class="about-section">
+        <div class="container">
+          <h2 class="section-title">¿Por qué una mascota es importante?</h2>
+          <div class="about-content">
+            <p class="about-text">
+              Sea que tengas una marca, un negocio, una campaña, un evento en
+              puerta, una mascota le da un toque peculiar y singular a tu
+              proyecto, pues genera más confianza, empatía y simpatía con tu
+              público meta, lo que se traduce en fidelidad y un sector más
+              grande, que a su vez se traduce en más éxito, ventas o metas
+              logradas.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sección: ¿Cómo funciona el laboratorio de creación de mascotas? -->
+      <section class="services-list-section">
+        <div class="container">
+          <h2 class="section-title">
+            ¿Cómo funciona el laboratorio de creación de mascotas?
+          </h2>
+
+          <!-- Layout móvil: acordeón -->
+          <div class="services-list-container mobile-layout">
+            <div class="service-list-item active">
+              <h3 class="service-list-name">1. Nos compartes tu idea</h3>
+              <div class="service-list-details">
+                <p>Nos compartes tu idea lo más clara y detallada posible.</p>
+                <img
+                  src="https://raw.githubusercontent.com/edvardoviedo/recursos/refs/heads/main/mascots_page/6.jpg"
+                  alt="Compartir idea"
+                  style="
+                    width: 100%;
+                    height: auto;
+                    border-radius: var(--border-radius);
+                    margin-bottom: var(--spacing-md);
+                  "
+                />
+              </div>
+            </div>
+            <div class="service-list-item">
+              <h3 class="service-list-name">2. Te mandamos el boceto</h3>
+              <div class="service-list-details">
+                <p>Te mandamos a la brevedad el boceto de tu idea.</p>
+                <img
+                  src="https://raw.githubusercontent.com/edvardoviedo/recursos/refs/heads/main/mascots_page/7.jpg"
+                  alt="Boceto"
+                  style="
+                    width: 100%;
+                    height: auto;
+                    border-radius: var(--border-radius);
+                    margin-bottom: var(--spacing-md);
+                  "
+                />
+              </div>
+            </div>
+            <div class="service-list-item">
+              <h3 class="service-list-name">3. Digitalizamos e ilustramos</h3>
+              <div class="service-list-details">
+                <p>
+                  Una vez que nos das el visto bueno, ¡procedemos a digitalizar
+                  e ilustrar tu nueva mascota!
+                </p>
+                <img
+                  src="https://raw.githubusercontent.com/edvardoviedo/recursos/refs/heads/main/mascots_page/8.jpg"
+                  alt="Digitalización"
+                  style="
+                    width: 100%;
+                    height: auto;
+                    border-radius: var(--border-radius);
+                    margin-bottom: var(--spacing-md);
+                  "
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- Layout desktop: horizontal -->
+          <div class="process-images-container desktop-layout">
+            <div class="process-image-item">
+              <p><strong>1. Nos compartes tu idea</strong></p>
+              <img
+                src="https://raw.githubusercontent.com/edvardoviedo/recursos/refs/heads/main/mascots_page/6.jpg"
+                alt="Compartir idea"
+              />
+              <p>Nos compartes tu idea lo más clara y detallada posible.</p>
+            </div>
+            <div class="process-image-item">
+              <p><strong>2. Te mandamos el boceto</strong></p>
+              <img
+                src="https://raw.githubusercontent.com/edvardoviedo/recursos/refs/heads/main/mascots_page/7.jpg"
+                alt="Boceto"
+              />
+              <p>Te mandamos a la brevedad el boceto de tu idea.</p>
+            </div>
+            <div class="process-image-item">
+              <p><strong>3. Digitalizamos e ilustramos</strong></p>
+              <img
+                src="https://raw.githubusercontent.com/edvardoviedo/recursos/refs/heads/main/mascots_page/8.jpg"
+                alt="Digitalización"
+              />
+              <p>
+                Una vez que nos das el visto bueno, ¡procedemos a digitalizar e
+                ilustrar tu nueva mascota!
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Galería deslizable -->
+      <section class="testimonials-section">
+        <div class="container">
+          <h2 class="section-title">Algunos ejemplos de nuestro trabajo</h2>
+          <p class="about-text">
+            Tu mascota o personaje puede ser tal cual la imaginas, tierna,
+            atrevida, valiente, animal, humano, ser místico, con uniforme, del
+            color que quieras, para que refleje justo el alma de tu proyecto.
+          </p>
+
+          <div class="swipe-indicator">
+            <svg
+              class="swipe-arrows"
+              width="80"
+              height="20"
+              viewBox="0 0 80 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M10 5 L15 10 L10 15"
+                stroke="#999"
+                stroke-width="2"
+                fill="none"
+                stroke-linecap="round"
+              />
+              <path
+                d="M30 5 L35 10 L30 15"
+                stroke="#999"
+                stroke-width="2"
+                fill="none"
+                stroke-linecap="round"
+              />
+              <path
+                d="M50 5 L55 10 L50 15"
+                stroke="#999"
+                stroke-width="2"
+                fill="none"
+                stroke-linecap="round"
+              />
+            </svg>
+          </div>
+
+          <div style="height: 0.8rem"></div>
+
+          <!-- Swiper wrapper -->
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img
+                  src="https://raw.githubusercontent.com/edvardoviedo/recursos/refs/heads/main/mascots_page/9.jpg"
+                  alt="Ejemplo 1"
+                  class="gallery-img"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="https://raw.githubusercontent.com/edvardoviedo/recursos/refs/heads/main/mascots_page/10.jpg"
+                  alt="Ejemplo 2"
+                  class="gallery-img"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="https://raw.githubusercontent.com/edvardoviedo/recursos/refs/heads/main/mascots_page/11.jpg"
+                  alt="Ejemplo 3"
+                  class="gallery-img"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="https://raw.githubusercontent.com/edvardoviedo/recursos/refs/heads/main/mascots_page/12.jpg"
+                  alt="Ejemplo 4"
+                  class="gallery-img"
+                />
+              </div>
+            </div>
+
+            <!-- Puntitos DEBAJO, fuera del swiper-wrapper -->
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sección: Formulario de contacto -->
+      <section class="contact-section">
+        <div class="container">
+          <h2 class="section-title">
+            Estamos listos y encantados de crear tu nueva mascota. ¡Comencemos!
+          </h2>
+          <form class="contact-form">
+            <div class="form-group">
+              <label for="nombre">Tu nombre</label>
+              <input type="text" id="nombre" name="nombre" required />
+            </div>
+            <div class="form-group">
+              <label for="correo">Tu correo</label>
+              <input type="email" id="correo" name="correo" required />
+            </div>
+            <div class="form-group">
+              <label for="tipo">Tienes un/una</label>
+              <select id="tipo" name="tipo">
+                <option value="marca">Marca</option>
+                <option value="negocio">Negocio</option>
+                <option value="campana">Campaña</option>
+                <option value="proyecto">Proyecto</option>
+                <option value="otro">Otro</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="detalles"
+                >Cuéntanos todos los detalles de cómo quieres que sea tu mascota
+                perfecta, aspecto, color, estilo, accesorios, pose.</label
+              >
+              <textarea
+                id="detalles"
+                name="detalles"
+                rows="6"
+                placeholder="Escribe aquí..."
+              ></textarea>
+            </div>
+            <div class="form-group">
+              <label for="mas_necesitas">¿Necesitas algo más?</label>
+              <textarea
+                id="mas_necesitas"
+                name="mas_necesitas"
+                rows="3"
+                placeholder="Escribe aquí..."
+              ></textarea>
+            </div>
+            <a
+              href="https://wa.me/528134765503"
+              class="cta-button primary large"
+              target="_blank"
+              >Enviar</a
+            >
+          </form>
+        </div>
+      </section>
+
+      <!-- Card: ¿Tienes alguna duda? -->
+      <section class="impact-section">
+        <div class="container">
+          <div class="impact-card">
+            <div class="impact-content">
+              <h2 class="impact-title">¿Tienes alguna duda?</h2>
+              <a
+                href="https://wa.me/528134765503"
+                class="cta-button primary pulsating-button"
+                target="_blank"
+                >Contacto</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container" style="text-align: center">
+        <a href="index.html" class="nav-link">Volver a inicio</a>
+      </div>
+    </footer>
+
+    <script src="mascotas.js"></script>
+    <!-- Asumiendo que el JS estará en script.js -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper(".swiper", {
+        loop: false,
+        autoplay: false,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+    </script>
+  </body>
+</html>
